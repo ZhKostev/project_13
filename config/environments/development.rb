@@ -24,4 +24,23 @@ Project13::Application.configure do
 
   # Debug mode disables concatenation and preprocessing of assets.
   config.assets.debug = true
+
+  default_url_options[:host] = 'http://localhost:3005'
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+      :address => "smtp.gmail.com",
+      :port => "587",
+      :domain => "http://localhost:3005",
+      :authentication => :plain,
+      :user_name => "kostev.no.reply@gmail.com",
+      :password => "qwe123QWE",
+      :enable_starttls_auto => true
+  }
+  config.action_mailer.raise_delivery_errors = false
+
+  #send email when site crash
+  config.middleware.use ExceptionNotifier,
+                        :email_prefix => "[Exception on live]",
+                        :sender_address => "kostev.no.reply@gmail.com",
+                        :exception_recipients => INTERNAL_SERVER_ERROR_EMAIL_RECIPIENTS
 end

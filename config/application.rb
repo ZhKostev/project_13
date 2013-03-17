@@ -23,5 +23,14 @@ module Project13
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+
+    config.generators do |g|
+      g.test_framework :rspec, :view_specs => false, :fixture => true, :fixture_replacement => "factory_girl", :routing_specs => false
+    end
+
+    config.assets.precompile += ['admin/admin.js', 'admin/admin.css']
   end
 end
+
+INTERNAL_SERVER_ERROR_EMAIL_RECIPIENTS = %w{zh.kostev@gmail.com mustang1365@mail.ru}
+
