@@ -1,0 +1,69 @@
+ru:
+  zhenya_kostev: Костев Евгений
+  speciality: квалифицированный Ruby on rails разработчик
+  about: Обо мне
+  about_desc: Коротко о себе
+  resume: Резюме
+  resume_desc: Профессиональные характеристики
+  contact: Связаться
+  contact_desc: Контактная информация
+  blog: Блог
+  blog_desc: Ruby on Rails блог
+  minsk: Минск
+  contact_head: Связаться
+  contact_information: Контактная Информация
+  your_name: Ваше имя
+  your_email: Адрес электронной почты
+  message: Сообщение*
+  if_find_bug: "Если вы обнаружи некорректную работу сайта, опечатку или у вас есть предложение
+  по улучшению сайта, пожалуйста свяжитесь со мной через форму обратной связи, либо написав письмо на электронную почту."
+  contact_success: Сообщение успешно отправлено
+  contact_message_err: Сообщение не может быть пустым! Пожалуйста, проверьте правильность заполнения полей и отправьте сообщение снова.
+  contact_email_err: Email неверного формата! Пожалуйста, проверьте правильность заполнения полей и отправьте сообщение снова.
+  about: О себе
+  system_dialog: Сообщение от сайта
+  cancel: Отмена
+  related_artiles: Похожие записи
+  subscribe_dialog: Подписаться на обновления
+  subscribe_congratulations: Подтверждение Подписки
+  success_unsubscribe: Подписка на мой блог аннулирована. Уведомления не будут вас беспокоить.
+  fail_unsubscribe: Что-то пошло не так. Вы уже отписались от оповещении раньше.
+  zh_kostev_blog_update: "[Zh Kostev блог] Обновление статей"
+  subscribe_form:
+    all_languages: Все языки (Английский+Русский)
+    en_language: Англйский
+    ru_language: Русский
+    email: Email
+    language: Язык
+    unsubscribe_notification: У вас будет возможномсть описаться от уведомлении по ссылке, которая будет находиться в каждом приходящем письме.
+    subscribe_success: Заявка на рассылку успешно зарегистрирована. На email выслано пробное уведомление.
+  devise:
+    failure:
+      user:
+        invalid: Username or password incorrect
+        unauthenticated: You must log in to access this page
+
+  contents: Оглавление
+  no_articles_yet: К сожалению нет ни одной записи.
+  rubric_name: Рубрика
+  rubrics: Рубрики
+  articles_count: Кол-во записей
+  helpers:
+    links:
+      read_more: Читать далее
+      back_to_content: К Оглавлению
+      subscribe: Подписаться
+  date:
+    formats:
+      default: "%d %m %Y"
+  time:
+    formats:
+      default: "%d %m %Y"
+  activerecord:
+    errors:
+      models:
+        subscribe:
+          attributes:
+            email:
+              blank: Не может быть пустым
+              invalid: Формат неверен

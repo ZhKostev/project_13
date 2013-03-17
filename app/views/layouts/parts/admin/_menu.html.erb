@@ -1,0 +1,56 @@
+<ul id="main-nav">  <!-- Accordion Menu -->
+
+  <li>
+    <a href="<%= admin_dashboard_path %>" class="nav-top-item no-submenu <%= 'current' if controller_name == 'dashboard' %>">
+      Dashboard
+    </a>
+  </li>
+
+  <li>
+    <a href="#" class="nav-top-item <%= 'current' if controller_name == 'articles' %>">
+      Articles
+    </a>
+    <ul style="display: block; ">
+      <li><a href="<%#= new_article_path %>" class="<%= 'current' if controller_name == 'articles' && action_name == 'new' %>">Write a new Article</a></li>
+      <li><a href="<%#= articles_path %>" class="<%= 'current' if controller_name == 'articles' && action_name != 'new' %>">Manage Articles</a></li>
+    </ul>
+  </li>
+
+  <li>
+    <a href="#" class="nav-top-item <%= 'current' if controller_name == 'rubrics' %>">
+      Rubrics
+    </a>
+    <ul style="display: block; ">
+      <li>
+        <a href="<%#= new_rubric_path %>" class="<%= 'current' if controller_name == 'rubrics' && action_name == 'new' %>">
+          Write a new Rubric
+        </a>
+      </li>
+      <li>
+        <a href="<%#= rubrics_path %>" class="<%= 'current' if controller_name == 'rubrics' && action_name != 'new' %>">
+          Manage Rubrics
+        </a>
+      </li>
+    </ul>
+  </li>
+
+  <li>
+    <a href="#" class="nav-top-item <%= 'current' if controller_name == 'subscribes' %>">
+      Subscribers
+    </a>
+    <ul style="display: block; ">
+      <li>
+        <a href="<%#= new_subscribe_path %>" class="<%= 'current' if controller_name == 'subscribes' && action_name == 'new' %>">
+          Add a new Subscriber
+        </a>
+      </li>
+      <li>
+        <a href="<%#= subscribes_path %>" class="<%= 'current' if controller_name == 'subscribes' && action_name != 'new' %>">
+          Manage Subscribers
+        </a>
+      </li>
+    </ul>
+  </li>
+
+
+</ul>
