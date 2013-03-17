@@ -22,12 +22,12 @@
     </a>
     <ul style="display: block; ">
       <li>
-        <a href="<%#= new_rubric_path %>" class="<%= 'current' if controller_name == 'rubrics' && action_name == 'new' %>">
+        <a href="<%= new_admin_rubric_path %>" class="<%= 'current' if controller_name == 'rubrics' && action_name == 'new' %>">
           Write a new Rubric
         </a>
       </li>
       <li>
-        <a href="<%#= rubrics_path %>" class="<%= 'current' if controller_name == 'rubrics' && action_name != 'new' %>">
+        <a href="<%= admin_rubrics_path %>" class="<%= 'current' if controller_name == 'rubrics' && action_name != 'new' %>">
           Manage Rubrics
         </a>
       </li>

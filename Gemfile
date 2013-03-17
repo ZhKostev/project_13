@@ -34,8 +34,7 @@ gem "default_value_for"
 gem "coderay"  #to highlight ruby syntax
 gem "RedCloth" #to highlight ruby syntax
 gem 'devise', :git => 'git://github.com/plataformatec/devise.git', :branch => "rails4" #flexible authentication solution for Rails based on Warden
+gem 'zh_kostev_ext'
+gem 'simple_form' #form builder
+gem 'kaminari'
 gem 'exception_notification_rails3', :require => 'exception_notifier'
-
-
-
-

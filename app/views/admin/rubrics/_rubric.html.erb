@@ -1,0 +1,9 @@
+<tr>
+  <td><%= rubric.language %></td>
+  <td><%= rubric.title %></td>
+  <td>
+    <%= link_to '', edit_admin_rubric_path(rubric), :class => 'edit_link' %>
+    <%= link_to '', admin_rubric_path(rubric), :class => 'destroy_link', :method =>  :delete,
+                :confirm => "Are sure you want to delete #{rubric.title}?" %>
+  </td>
+</tr>

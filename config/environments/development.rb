@@ -38,9 +38,9 @@ Project13::Application.configure do
   }
   config.action_mailer.raise_delivery_errors = false
 
-  #send email when site crash
-  config.middleware.use ExceptionNotifier,
-                        :email_prefix => "[Exception on live]",
-                        :sender_address => "kostev.no.reply@gmail.com",
-                        :exception_recipients => INTERNAL_SERVER_ERROR_EMAIL_RECIPIENTS
+  ##send email when site crash
+  #config.middleware.use ExceptionNotifier,
+  #                      :email_prefix => "[Exception on live]",
+  #                      :sender_address => "kostev.no.reply@gmail.com",
+  #                      :exception_recipients => INTERNAL_SERVER_ERROR_EMAIL_RECIPIENTS
 end
