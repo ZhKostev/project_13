@@ -18,6 +18,7 @@ group :test, :development do
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'simplecov'
+  gem 'pry-rails'
 end
 
 gem 'jbuilder', '~> 1.0.1'
@@ -27,7 +28,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 
 gem "friendly_id", "~> 4.0.1"
-gem "ckeditor"
+gem "ckeditor", :git => 'git://github.com/galetahub/ckeditor.git', :branch => "master"
 gem "carrierwave"
 gem "mini_magick"
 gem "default_value_for"
@@ -36,5 +37,5 @@ gem "RedCloth" #to highlight ruby syntax
 gem 'devise', :git => 'git://github.com/plataformatec/devise.git', :branch => "rails4" #flexible authentication solution for Rails based on Warden
 gem 'zh_kostev_ext'
 gem 'simple_form' #form builder
-gem 'kaminari'
+gem 'will_paginate' #for pagination
 gem 'exception_notification_rails3', :require => 'exception_notifier'

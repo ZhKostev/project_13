@@ -1,4 +1,4 @@
-<%%= simple_form_for(@<%= singular_table_name %>) do |f| %>
+<%%= simple_form_for([:admin, @<%= singular_table_name %>]) do |f| %>
   <%%= f.error_notification %>
 
   <div class="inputs">
@@ -8,6 +8,6 @@
   </div>
 
   <div class="actions">
-    <%%= f.button :submit :class =>'button' %>
+    <%%= f.button :submit, :class =>'button' %>
   </div>
 <%% end %>

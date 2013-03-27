@@ -1,0 +1,59 @@
+<h2>Articles Index</h2>
+<a class="shortcut-button" href="<%= new_admin_article_path %>">
+  <span>
+    <%= image_tag image_path('admin_images/pencil_big.png') %> <br/>
+	Add a Article
+  </span>
+</a>
+<div style="width: 50%">
+  <%= render :partial => 'admin/shared/notifications' %>
+</div>
+
+<div class="content-box" style="width: 50%">
+  <table>
+    <thead>
+    <tr>
+                  <th>Title</th>
+                  <th>Meta description</th>
+                  <th>Short description</th>
+                  <th>Body</th>
+            <th width="60px;">Actions</th>
+    </tr>
+    </thead>
+
+    <tfoot>
+    <tr>
+      <td colspan="5">
+        <%= will_paginate @articles %><br/>
+        <div class="clear"></div>
+      </td>
+    </tr>
+    </tfoot>
+
+    <tbody>
+    <% if @articles.any? %>
+        <% @articles.each do |article| %>
+            <tr>
+                                  <td><%= article.title %></td>
+                                  <td><%= article.meta_description %></td>
+                                  <td><%= article.short_description %></td>
+                                  <td><%= article.body %></td>
+                            <td>
+                <%= link_to '', edit_admin_article_path(article), :class => 'edit_link' %>
+                <%= link_to '', admin_article_path(article), :class => 'destroy_link', :method =>  :delete,
+                            :confirm => "Are sure you want to delete #{article.title}?" %>
+              </td>
+            </tr>
+        <% end %>
+    <% else %>
+        <tr>
+          <td colspan="3">
+            There is no articles yet. Please click "Add a Admin article" to add new one.
+          </td>
+        </tr>
+    <% end %>
+
+    </tbody>
+
+  </table>
+</div>

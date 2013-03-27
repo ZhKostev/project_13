@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130317112238) do
+ActiveRecord::Schema.define(version: 20130319180520) do
 
   create_table "admins", force: true do |t|
     t.string   "email",               default: "", null: false
@@ -22,6 +22,26 @@ ActiveRecord::Schema.define(version: 20130317112238) do
   end
 
   add_index "admins", ["email"], name: "index_admins_on_email", unique: true
+
+  create_table "articles", force: true do |t|
+    t.string   "title"
+    t.string   "meta_description"
+    t.string   "short_description"
+    t.string   "language"
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "slug"
+  end
+
+  add_index "articles", ["slug"], name: "index_articles_on_slug"
+
+  create_table "articles_rubrics", id: false, force: true do |t|
+    t.integer "article_id", null: false
+    t.integer "rubric_id",  null: false
+  end
+
+  add_index "articles_rubrics", ["article_id", "rubric_id"], name: "index_articles_rubrics_on_article_id_and_rubric_id", unique: true
 
   create_table "ckeditor_assets", force: true do |t|
     t.string   "data_file_name",               null: false
@@ -44,6 +64,9 @@ ActiveRecord::Schema.define(version: 20130317112238) do
     t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "slug"
   end
+
+  add_index "rubrics", ["slug"], name: "index_rubrics_on_slug"
 
 end

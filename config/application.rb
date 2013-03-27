@@ -33,4 +33,5 @@ module Project13
 end
 
 INTERNAL_SERVER_ERROR_EMAIL_RECIPIENTS = %w{zh.kostev@gmail.com mustang1365@mail.ru}
+SUPPORTED_LANGUAGES = [:ru, :en]
 

@@ -1,7 +1,7 @@
 <%= simple_form_for @rubric, :url => (@rubric.persisted? ? admin_rubric_path(@rubric) : url_for(:controller => 'admin/rubrics', :action =>:create)) do |f| %>
     <%= f.error_notification %>
     <div class="inputs">
-      <%= f.input :language %>
+      <%= f.input :language, :collection => SUPPORTED_LANGUAGES.map{|l| [l.to_s, l.to_s]}, :include_blank => false %>
 
       <%= f.input :title %>
     </div>

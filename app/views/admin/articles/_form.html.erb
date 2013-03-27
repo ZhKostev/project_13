@@ -1,0 +1,52 @@
+<%= simple_form_for([:admin, @article]) do |f| %>
+    <%= f.error_notification %>
+
+    <div class="inputs">
+      <div class="form_column ">
+        <%= f.input :language, :collection => SUPPORTED_LANGUAGES.map{|l| [l.to_s, l.to_s]}, :include_blank => false %>
+
+        <%= f.input :title %>
+        <%= f.input :meta_description %>
+        <%= f.input :short_description %>
+      </div>
+
+      <div class="form_column " style="margin-left: 50px; max-width: 765px">
+        <h3 style="margin-bottom: 0">Select Rubrics</h3>
+
+        <div class="rubrics">
+          <% @rubrics.each do |rubric| %>
+              <div class="row">
+                <%= label_tag do %>
+                    <%= check_box_tag "article[rubrics][]", rubric.id, f.object.rubrics.include?(rubric) %>
+                    <span><%= rubric.title.humanize %></span>
+                <% end %>
+              </div>
+          <% end %>
+          <div class="clear"></div>
+        </div>
+      </div>
+
+      <div class="clear"></div>
+
+      <h3 style="margin-bottom: 0; padding-bottom: 0;">
+        Please use following structures to format posts:
+      </h3>
+
+      <div class="left" style="width: 300px">
+      <pre>
+      <%= %Q(
+      <pre>
+        <code lang="ruby">
+            Place ruby code here.
+        </code>
+      </pre>) %>
+      </pre>
+      </div>
+
+      <%= f.input :body %>
+    </div>
+
+    <div class="actions">
+      <%= f.button :submit, :class => 'button' %>
+    </div>
+<% end %>

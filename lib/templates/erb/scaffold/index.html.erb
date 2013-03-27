@@ -1,0 +1,57 @@
+<h2><%= plural_table_name.to_s.capitalize %> Index</h2>
+<a class="shortcut-button" href="<%%= new_<%= singular_table_name %>_path %>">
+  <span>
+    <%%= image_tag image_path('admin_images/pencil_big.png') %> <br/>
+	Add a <%= human_name %>
+  </span>
+</a>
+<div style="width: 50%">
+  <%%= render :partial => 'admin/shared/notifications' %>
+</div>
+
+<div class="content-box" style="width: 50%">
+  <table>
+    <thead>
+    <tr>
+      <% attributes.each do |attribute| -%>
+            <th><%= attribute.human_name %></th>
+      <% end -%>
+      <th width="60px;">Actions</th>
+    </tr>
+    </thead>
+
+    <tfoot>
+    <tr>
+      <td colspan="<%= attributes.size + 1 %>">
+        <%%= paginate @<%= plural_table_name %> %><br/>
+        <div class="clear"></div>
+      </td>
+    </tr>
+    </tfoot>
+
+    <tbody>
+    <%% if @<%= plural_table_name %>.any? %>
+        <%% @<%= plural_table_name %>.each do |<%= singular_table_name %>| %>
+            <tr>
+              <% attributes.each do |attribute| -%>
+                    <td><%%= <%= singular_table_name %>.<%= attribute.name %> %></td>
+              <% end -%>
+              <td>
+                <%%= link_to '', edit_<%= singular_table_name %>_path(<%= singular_table_name %>), :class => 'edit_link' %>
+                <%%= link_to '', <%= singular_table_name %>_path(<%= singular_table_name %>), :class => 'destroy_link', :method =>  :delete,
+                            :confirm => "Are sure you want to delete #{<%= singular_table_name %>.title}?" %>
+              </td>
+            </tr>
+        <%% end %>
+    <%% else %>
+        <tr>
+          <td colspan="3">
+            There is no <%= plural_table_name %> yet. Please click "Add a <%= singular_table_name.to_s.humanize %>" to add new one.
+          </td>
+        </tr>
+    <%% end %>
+
+    </tbody>
+
+  </table>
+</div>

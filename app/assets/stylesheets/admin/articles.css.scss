@@ -3,9 +3,16 @@
   overflow:auto;
   .row {
     margin-top: 5px;
+    margin-left: 10px;
+    width: 140px;
+    float: left;
     label {
       vertical-align: top;
       display: inline-block;
+      span{
+        display: inline-block;
+        vertical-align: top;
+      }
     }
     input[type='checkbox'] {
       margin: 0;

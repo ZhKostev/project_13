@@ -1,0 +1,29 @@
+<div style="width: 50%">
+  <%= render :partial => 'admin/shared/notifications' %>
+</div>
+
+<p>
+  <strong>Title:</strong>
+  <%= @article.title %>
+</p>
+
+<p>
+  <strong>Meta description:</strong>
+  <%= @article.meta_description %>
+</p>
+
+<p>
+  <strong>Short description:</strong>
+  <%= @article.short_description %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @article.body %>
+</p>
+
+
+<div class="show_additional_buttons">
+    <%= link_to 'Edit', edit_admin_article_path(@article) %> |
+    <%= link_to 'Back', admin_articles_path %>
+</div>

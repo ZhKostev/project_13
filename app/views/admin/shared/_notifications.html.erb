@@ -1,6 +1,6 @@
 <% if flash[:notice] %>
     <div class="notification information png_bg">
-      <%= link_to_function image_tag('images/icons/cross_grey_small.png'), "hide_notice('information')", :class => "close" %>
+      <%= link_to_function image_tag('admin_images/icons/cross_grey_small.png'), "hide_notice('information')", :class => "close" %>
 
       <div>
         <%= flash[:notice] %>
@@ -9,7 +9,7 @@
 <% end %>
 <% if flash[:error] %>
     <div class="notification error png_bg">
-      <%= link_to_function image_tag('images/icons/cross_grey_small.png'), "hide_notice('error')", :class => "close" %>
+      <%= link_to_function image_tag('admin_images/icons/cross_grey_small.png'), "hide_notice('error')", :class => "close" %>
 
       <div>
         <%= flash[:error] %>
@@ -18,7 +18,7 @@
 <% end %>
 <% if flash[:success] %>
     <div class="notification success png_bg">
-      <%= link_to_function image_tag('images/icons/cross_grey_small.png'), "hide_notice('success')", :class => "close" %>
+      <%= link_to_function image_tag('admin_images/icons/cross_grey_small.png'), "hide_notice('success')", :class => "close" %>
 
       <div>
         <%= flash[:success] %>

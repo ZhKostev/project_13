@@ -1,17 +1,7 @@
-.admin_form {
-  .form_column {
-    float: left;
-    .small-input {
-      width: 95% !important;
-    }
-  }
-  .form_column.one_of_three {
-    width: 30%;
-    margin-left: 2%;
-  }
-  .form_column.one_of_two {
-    width: 47%;
-    margin-left: 2%;
+.form_column {
+  float: left;
+  .small-input {
+    width: 95% !important;
   }
 }
 
@@ -20,10 +10,10 @@
   margin-top: -25px;
 }
 
-.show_additional_buttons{
+.show_additional_buttons {
   margin-left: 0px;
 }
 
-.actions{
+.actions {
   margin-top: 5px;
 }
