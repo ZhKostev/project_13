@@ -1,6 +1,7 @@
 class Rubric < ActiveRecord::Base
-  extend FriendlyId
-  friendly_id :title, use: :slugged
+  #TODO uncomment after friendly id will support rails 4
+  #extend FriendlyId
+  #friendly_id :title, use: :slugged
 
   has_and_belongs_to_many :articles
 

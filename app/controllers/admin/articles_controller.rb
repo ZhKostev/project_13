@@ -42,7 +42,7 @@ class Admin::ArticlesController < Admin::BaseController
   private
   # Never trust parameters from the scary internet, only allow the white list through.
   def article_params
-    params.require(:article).permit(:title, :meta_description, :short_description, :body)
+    params.require(:article).permit(:title, :meta_description, :short_description, :body, :language)
   end
 
   #setup variables for article form
@@ -55,5 +55,4 @@ class Admin::ArticlesController < Admin::BaseController
     find_variables_for_form
     render action: action
   end
-
 end
