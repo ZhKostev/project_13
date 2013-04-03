@@ -18,8 +18,7 @@ class Admin::ArticlesController < Admin::BaseController
 
   def create
     @article = Article.new(article_params)
-
-    if @article.save
+    if ArticlePublishSystem.new(@article).save(params[:commit])
       redirect_to admin_article_path(@article), notice: 'Article was successfully created.'
     else
       find_variables_and_render('new')
@@ -27,7 +26,7 @@ class Admin::ArticlesController < Admin::BaseController
   end
 
   def update
-    if @article.update(article_params)
+    if ArticlePublishSystem.new(@article).update(article_params, params[:commit])
       redirect_to admin_article_path(@article), notice: 'Article was successfully updated.'
     else
       find_variables_and_render('edit')
@@ -42,7 +41,7 @@ class Admin::ArticlesController < Admin::BaseController
   private
   # Never trust parameters from the scary internet, only allow the white list through.
   def article_params
-    params.require(:article).permit(:title, :meta_description, :short_description, :body, :language)
+    params.require(:article).permit(:title, :meta_description, :short_description, :body, :language, :rubric_ids => [])
   end
 
   #setup variables for article form

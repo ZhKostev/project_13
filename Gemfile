@@ -19,6 +19,7 @@ group :test, :development do
   gem 'faker'
   gem 'simplecov'
   gem 'pry-rails'
+  gem 'quiet_assets'
 end
 
 gem 'jbuilder', '~> 1.0.1'
@@ -38,4 +39,5 @@ gem 'devise', :git => 'git://github.com/plataformatec/devise.git', :branch => "r
 gem 'zh_kostev_ext'
 gem 'simple_form' #form builder
 gem 'will_paginate' #for pagination
+gem 'deep_cloneable' #clone associations
 gem 'exception_notification_rails3', :require => 'exception_notifier'

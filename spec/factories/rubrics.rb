@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :rubric, :class => 'Rubric' do
-    language "MyString"
-    title "MyString"
+    language "ru"
+    title { Faker::Name.name }
   end
 end

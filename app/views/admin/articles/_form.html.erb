@@ -3,7 +3,7 @@
 
     <div class="inputs">
       <div class="form_column ">
-        <%= f.input :language, :collection => SUPPORTED_LANGUAGES.map{|l| [l.to_s, l.to_s]}, :include_blank => false %>
+        <%= f.input :language, :collection => SUPPORTED_LANGUAGES.map { |l| [l.to_s, l.to_s] }, :include_blank => false %>
 
         <%= f.input :title %>
         <%= f.input :meta_description %>
@@ -17,7 +17,7 @@
           <% @rubrics.each do |rubric| %>
               <div class="row">
                 <%= label_tag do %>
-                    <%= check_box_tag "article[rubrics][]", rubric.id, f.object.rubrics.include?(rubric) %>
+                    <%= check_box_tag "article[rubric_ids][]", rubric.id, f.object.rubrics.include?(rubric) %>
                     <span><%= rubric.title.humanize %></span>
                 <% end %>
               </div>
@@ -48,5 +48,6 @@
 
     <div class="actions">
       <%= f.button :submit, :class => 'button' %>
+      <%= f.button :submit, 'Publish', :class => 'button' %>
     </div>
 <% end %>

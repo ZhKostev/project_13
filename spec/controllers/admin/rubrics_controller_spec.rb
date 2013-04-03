@@ -2,7 +2,7 @@ require 'spec_helper'
 describe Admin::RubricsController do
 
   def valid_attributes
-    {"language" => "MyString", 'title' => 'MyString'}
+    {"language" => "ru", 'title' => 'MyString'}
   end
 
   describe 'with admin' do
