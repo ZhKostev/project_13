@@ -2,57 +2,61 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  zhenya_kostev: Zhenya Kostev
-  speciality: professional Ruby on Rails developer
-  about: About
-  about_desc: Brief info
-  resume: Resume
-  resume_desc: Personal Profile
-  contact: Contact
-  contact_desc: Get In Touch
-  blog: Blog
-  blog_desc: Blog about RoR
-  minsk: Minsk
-  contact_head: Get In Touch
-  contact_information: Contact Information
-  your_name: Your Name
-  your_email: Your E-mail Address
-  message: Message*
-  if_find_bug: "Please, contact me if you found bug on this site or you have suggestions for improvement."
-  contact_success: Message was successully send.
-  contact_message_err: Message can't be blank! Please check fields and resubmit message form.
-  contact_email_err: Email is not valid! Please check fields and resubmit message form.
-  about: About
-  system_dialog: System info
-  contents: Table of Contents
-  no_articles_yet: Sorry, but there are no articles now.
-  rubric_name: Rubric name
-  rubrics: Rubrics
-  articles_count: Articles count
-  cancel: Cancel
-  related_artiles: Related artiles
-  subscribe_congratulations: Subscribe Congratulation
-  success_unsubscribe: "You have unsubscribed from my blog. No notifications will be sent to your email address"
-  fail_unsubscribe: "Sorry, Smth goes wrong. You have already unsubscribed from my blog before."
-  zh_kostev_blog_update: News from Zh. Kostev blog
-  subscribe_form:
-    all_languages: All Languages (English+Russian)
-    en_language: English
-    ru_language: Russian
-    email: Email
-    language: Language
-    unsubscribe_notification: You will be able to unsubscribe by the link in the notification emails
-    subscribe_success: You successfully subscribed to this blog. Welcome email has been sent to your email address.
-  helpers:
-    links:
-      read_more: Read more
-      back_to_content: Back to Table of Contents
-      subscribe: Subscribe
-  date:
-    formats:
-      default: "%m %d %Y"
-  time:
-    formats:
-      default: "%m %d %Y"
+  blog_title: ZhKostev Blog
+  menu:
+    home: Home
+    about: About Me
+
+#  zhenya_kostev: Zhenya Kostev
+#  speciality: professional Ruby on Rails developer
+#  about_desc: Brief info
+#  resume: Resume
+#  resume_desc: Personal Profile
+#  contact: Contact
+#  contact_desc: Get In Touch
+#  blog: Blog
+#  blog_desc: Blog about RoR
+#  minsk: Minsk
+#  contact_head: Get In Touch
+#  contact_information: Contact Information
+#  your_name: Your Name
+#  your_email: Your E-mail Address
+#  message: Message*
+#  if_find_bug: "Please, contact me if you found bug on this site or you have suggestions for improvement."
+#  contact_success: Message was successully send.
+#  contact_message_err: Message can't be blank! Please check fields and resubmit message form.
+#  contact_email_err: Email is not valid! Please check fields and resubmit message form.
+#  about: About
+#  system_dialog: System info
+#  contents: Table of Contents
+#  no_articles_yet: Sorry, but there are no articles now.
+#  rubric_name: Rubric name
+#  rubrics: Rubrics
+#  articles_count: Articles count
+#  cancel: Cancel
+#  related_artiles: Related artiles
+#  subscribe_congratulations: Subscribe Congratulation
+#  success_unsubscribe: "You have unsubscribed from my blog. No notifications will be sent to your email address"
+#  fail_unsubscribe: "Sorry, Smth goes wrong. You have already unsubscribed from my blog before."
+#  zh_kostev_blog_update: News from Zh. Kostev blog
+#  subscribe_form:
+#    all_languages: All Languages (English+Russian)
+#    en_language: English
+#    ru_language: Russian
+#    email: Email
+#    language: Language
+#    unsubscribe_notification: You will be able to unsubscribe by the link in the notification emails
+#    subscribe_success: You successfully subscribed to this blog. Welcome email has been sent to your email address.
+#  helpers:
+#    links:
+#      read_more: Read more
+#      back_to_content: Back to Table of Contents
+#      subscribe: Subscribe
+#  date:
+#    formats:
+#      default: "%m %d %Y"
+#  time:
+#    formats:
+#      default: "%m %d %Y"
 
 

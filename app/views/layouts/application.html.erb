@@ -2,13 +2,43 @@
 <html>
 <head>
   <title>Project13</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+<div class="container">
+  <div class="row"></div>
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <%= link_to t('blog_title'), root_path, :class => 'brand' %>
+        <a class="" href="#"></a>
+
+        <div class="nav-collapse collapse" style="height: 0;">
+          <ul class="nav">
+            <li>
+              <%= link_to t('menu.home'), root_path %>
+            </li>
+            <li>
+              <%= link_to t('menu.about'), '#' %>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <%= yield %>
+  </div>
+</div>
+
 
 </body>
 </html>

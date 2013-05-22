@@ -1,1 +1,1 @@
-rvm use 2.0.0@project_13 --create
+rvm use ruby-2.0.0-p195@project_13 --create

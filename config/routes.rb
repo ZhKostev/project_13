@@ -9,4 +9,7 @@ Project13::Application.routes.draw do
   devise_for :admins
   mount Ckeditor::Engine => '/ckeditor'
 
+  resources :rubrics, :only => [:index, :show]
+
+  root :to => 'rubrics#index'
 end
